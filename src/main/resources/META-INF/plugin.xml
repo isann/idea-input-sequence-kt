@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>xyz.zono.plugin.InputSequenceAction</id>
+    <name>InputSequence</name>
+    <vendor url="https://github.com/isann">
+        isann
+    </vendor>
+
+    <description><![CDATA[
+        This plugin allows you to enter a sequential number for the current caret in Jetbrains products.<br>
+        Default shortcut key <em>Shift ＋ Ctrl ＋ F12</em>.
+    ]]></description>
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="131"/>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="xyz.zono.plugin.InputSequenceAction"
+                class="xyz.zono.plugin.InputSequenceAction"
+                text="InputSequence">
+            <add-to-group group-id="EditMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default"
+                               first-keystroke="shift meta F12"/>
+        </action>
+    </actions>
+</idea-plugin>
