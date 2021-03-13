@@ -7,7 +7,7 @@ Default shortcut key **Shift ＋ Ctrl ＋ F12**.
 
 
 # Install
-Download [InputSequence - Plugins | JetBrains](https://plugins.jetbrains.com/plugin/16304-inputsequence?preview=true).
+Download [InputSequence - Plugins | JetBrains](https://plugins.jetbrains.com/plugin/16304-inputsequence).
 
 
 ## How to alternative install
