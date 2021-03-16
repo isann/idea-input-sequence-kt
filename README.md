@@ -5,6 +5,10 @@ Default shortcut key **Shift ＋ Ctrl ＋ F12**.
 
 ![alt](https://raw.githubusercontent.com/isann/images/master/idea-input-sequence-image.gif "title")
 
+## Note
+Another great plugin that can do a lot more than just incrementing is [String Manipulation](https://plugins.jetbrains.com/plugin/2162-string-manipulation).
+If the functionality of my plugin is not enough for you, consider using this one!
+
 
 # Install
 Download [InputSequence - Plugins | JetBrains](https://plugins.jetbrains.com/plugin/16304-inputsequence).
