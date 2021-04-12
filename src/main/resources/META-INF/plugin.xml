@@ -7,11 +7,13 @@
 
     <description><![CDATA[
         This plugin allows you to enter a sequential number for the current caret in Jetbrains products.<br>
-        Default shortcut key <em>Shift ＋ Ctrl ＋ F12</em>.
+        Default shortcut key <em>Shift ＋ Ctrl ＋ F12</em>.<br>
+        <br>
+        <em>Note:</em> The shortcut keys will not work on Mac with Touch Bar. Instead, you can use key mapping to map any key. If you have a physical keyboard with Function keys connected, it will work fine.
     ]]></description>
 
     <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-    <idea-version since-build="131"/>
+<!--    <idea-version since-build="131"/>-->
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->

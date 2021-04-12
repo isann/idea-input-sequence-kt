@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'xyz.zono'
-version '0.0.1'
+version '0.0.2'
 
 repositories {
     mavenCentral()
@@ -20,10 +20,11 @@ dependencies {
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     version '2020.3.2'
+    updateSinceUntilBuild false
 }
 patchPluginXml {
     changeNotes """
-      <em>First release </em>🌸"""
+      <em>Update compatible versions.</em>"""
 }
 test {
     useJUnitPlatform()
