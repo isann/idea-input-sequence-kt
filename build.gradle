@@ -1,30 +1,51 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.7.2'
-    id 'org.jetbrains.kotlin.jvm' version '1.4.31'
+    id 'org.jetbrains.intellij.platform' version '2.13.1'
+    id 'org.jetbrains.kotlin.jvm' version '2.1.0'
 }
 
-group 'xyz.zono'
-version '0.0.3'
+group = 'xyz.zono'
+version = '1.0.0'
+
+kotlin {
+    jvmToolchain(17)
+}
 
 repositories {
     mavenCentral()
+    intellijPlatform {
+        defaultRepositories()
+    }
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    intellijPlatform {
+        intellijIdeaCommunity('2023.2')
+    }
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
-// See https://github.com/JetBrains/gradle-intellij-plugin/
-intellij {
-    version '2020.3.2'
-    updateSinceUntilBuild false
-}
-patchPluginXml {
-    changeNotes """
-      <em>Update compatible versions.</em>"""
+// See https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin.html
+intellijPlatform {
+    pluginConfiguration {
+        id = 'xyz.zono.plugin.InputSequenceAction'
+        name = 'InputSequence'
+        vendor {
+            name = 'isann'
+        }
+        ideaVersion {
+            sinceBuild = '232'
+        }
+        changeNotes = """
+      <em>Update compatible versions and migrate to IntelliJ Platform Gradle Plugin.</em>"""
+    }
+
+    pluginVerification {
+        ides {
+            recommended()
+        }
+    }
 }
 test {
     useJUnitPlatform()
